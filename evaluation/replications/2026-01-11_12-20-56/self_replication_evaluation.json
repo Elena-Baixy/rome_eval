@@ -1,0 +1,14 @@
+{
+  "Checklist": {
+    "RP1_ImplementationReconstructability": "PASS",
+    "RP2_EnvironmentReproducibility": "PASS",
+    "RP3_DeterminismAndStability": "PASS",
+    "RP4_DemoPresentation": "NA"
+  },
+  "Rationale": {
+    "RP1_ImplementationReconstructability": "The experiment was successfully reconstructed from plan.md and the code walkthrough without requiring major guesswork. The causal tracing methodology was clearly described with explicit implementation details including noise level (3x std), batching convention (first element clean, rest corrupted), layer naming (transformer.h.{num}), and window size (10 for MLP/attention). All core logic could be reimplemented by following the plan and examining the source code structure.",
+    "RP2_EnvironmentReproducibility": "The environment was successfully restored with standard dependencies (torch, transformers, matplotlib, numpy). GPT-2 XL is publicly available via HuggingFace, the dataset (known_1000.json) was present in the repository, and GPU support (NVIDIA A100) was available. No version conflicts or missing dependencies occurred. The environment is fully reproducible with standard scientific Python packages.",
+    "RP3_DeterminismAndStability": "Results demonstrate good determinism and stability. The code uses numpy.random.RandomState(1) for reproducible noise, GPT-2 XL predictions are stable (e.g., Seattle with prob ~0.95 for Space Needle prompt), causal tracing shows consistent patterns (peak in middle layers 15-20, last subject token most important, MLP stronger than attention), and gradients are disabled eliminating training variance. Results would replicate consistently across runs.",
+    "RP4_DemoPresentation": "Not applicable. The repository does not claim to provide a demo - it provides full implementations of experiments. The notebooks (causal_trace.ipynb, rome.ipynb) are complete experimental implementations, not simplified demos. Since no demo was claimed or used in replication, this criterion is marked NA."
+  }
+}
