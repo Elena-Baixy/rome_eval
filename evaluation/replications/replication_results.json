@@ -1,0 +1,44 @@
+{
+  "causal_tracing": {
+    "prompt": "The Space Needle is in the city of",
+    "subject": "Space Needle",
+    "answer": " Seattle",
+    "base_score": 0.9552346467971802,
+    "corrupted_score": 0.0009788245661184192,
+    "peak_layer": 14,
+    "top_5_layers": [
+      14,
+      15,
+      16,
+      17,
+      13
+    ]
+  },
+  "rome_edits": [
+    {
+      "subject": "Steve Jobs",
+      "efficacy_score": 1.0,
+      "paraphrase_score": 0.0,
+      "neighborhood_score": 1.0
+    },
+    {
+      "subject": "LeBron James",
+      "efficacy_score": 1.0,
+      "paraphrase_score": 0.0,
+      "neighborhood_score": 0.5
+    },
+    {
+      "subject": "Louvre Museum",
+      "efficacy_score": 1.0,
+      "paraphrase_score": 0.0,
+      "neighborhood_score": 1.0
+    }
+  ],
+  "aggregate_metrics": {
+    "mean_efficacy": 1.0,
+    "mean_paraphrase": 0.0,
+    "mean_neighborhood": 0.8333333333333334
+  },
+  "model": "gpt2-xl",
+  "target_layer": 17
+}
