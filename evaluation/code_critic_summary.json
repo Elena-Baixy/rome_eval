@@ -1,0 +1,30 @@
+{
+  "Runnable_Percentage": 95.83,
+  "Incorrect_Percentage": 2.38,
+  "Redundant_Percentage": 0.0,
+  "Irrelevant_Percentage": 12.5,
+  "Correction_Rate_Percentage": 100.0,
+  "Issues": {
+    "Runnable_Issues_Exist": true,
+    "Output_Mismatch_Exists": false,
+    "Incorrect_Exists": true,
+    "Redundant_Exists": false,
+    "Irrelevant_Exists": true
+  },
+  "Checklist": {
+    "C1_All_Runnable": "FAIL",
+    "C2_All_Correct": "FAIL",
+    "C3_No_Redundant": "PASS",
+    "C4_No_Irrelevant": "FAIL"
+  },
+  "Rationale": {
+    "C1_All_Runnable": "2 blocks have Runnable = N (allennlp dependency for KE/MEND, tfidf_stats sklearn issue)",
+    "C2_All_Correct": "1 block has Correct-Implementation = N (tfidf_stats sklearn version incompatibility)",
+    "C3_No_Redundant": "No blocks have Redundant = Y",
+    "C4_No_Irrelevant": "6 blocks have Irrelevant = Y (Colab-specific setup, IPython magic, interactive controls)"
+  },
+  "Special_Cases": {
+    "allennlp_dependency": "Cannot install due to Python/spacy version conflicts. Affects KE and MEND baselines only.",
+    "tfidf_stats_sklearn": "sklearn version incompatibility with _tfidf._idf_diag attribute. Use skip_generation_tests=True as workaround."
+  }
+}
