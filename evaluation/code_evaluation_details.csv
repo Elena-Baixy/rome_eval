@@ -1,0 +1,73 @@
+file,block_id,description,runnable,correct_impl,redundant,irrelevant,notes
+causal_trace.ipynb,cell-1,Colab setup bash commands,Y,NA,N,Y,"Colab-specific setup, skipped in local environment"
+causal_trace.ipynb,cell-2,Colab detection and environment check,Y,Y,N,N,
+causal_trace.ipynb,cell-4,Autoreload extension for development,Y,NA,N,N,
+causal_trace.ipynb,cell-6,Import causal trace modules and utilities,Y,Y,N,N,
+causal_trace.ipynb,cell-8,Load GPT-2 XL model and tokenizer,Y,Y,N,N,
+causal_trace.ipynb,cell-9,Test model factual predictions,Y,Y,N,N,
+causal_trace.ipynb,cell-11,Compute noise level from embedding statistics,Y,Y,N,N,
+causal_trace.ipynb,cell-13,Define trace_with_patch function for causal intervention,Y,Y,N,N,
+causal_trace.ipynb,cell-15,Define calculate_hidden_flow and trace scanning functions,Y,Y,N,N,
+causal_trace.ipynb,cell-17,Define plotting functions for heatmap visualization,Y,Y,N,N,
+causal_trace.ipynb,cell-19,Run causal tracing on Space Needle prompt,Y,Y,N,N,
+causal_trace.ipynb,cell-21,Run causal tracing on multiple known facts,Y,Y,N,N,
+rome.ipynb,5416767c,Colab setup bash commands,Y,NA,N,Y,"Colab-specific setup, skipped in local environment"
+rome.ipynb,b7a246a2,Colab detection and environment check,Y,Y,N,N,
+rome.ipynb,9bdfca4c,Autoreload extension,Y,NA,N,N,
+rome.ipynb,aec81909,Import ROME and utility modules,Y,Y,N,N,
+rome.ipynb,7b5abe30,Set model name to gpt2-xl,Y,Y,N,N,
+rome.ipynb,bb3c3c37,Load GPT-2 XL model and tokenizer,Y,Y,N,N,
+rome.ipynb,0f24ec03,Define edit request and generation prompts,Y,Y,N,N,
+rome.ipynb,3c63d85f,Set algorithm name to ROME,Y,Y,N,N,
+rome.ipynb,c5820200,Execute ROME model editing,Y,Y,N,N,Required torch.set_grad_enabled(True) to be set before execution
+rome.ipynb,bae6d743,stop_execution utility call,Y,NA,N,N,
+rome.ipynb,1a488d43,Interactive text generation,Y,NA,N,N,"Interactive cell, skipped in automated evaluation"
+rome.ipynb,da06a923,Alternative request: LeBron James plays football,Y,Y,N,N,
+rome.ipynb,bea6565c,Alternative request: Mario Kart developed by Apple,Y,Y,N,N,
+rome.ipynb,62b8defa,Empty cell,Y,NA,N,Y,Empty cell at end of notebook
+average_causal_effects.ipynb,f379178d,Markdown: Script introduction,Y,NA,N,N,
+average_causal_effects.ipynb,26bba71c,"Load and aggregate causal traces, compute AIE",N,Y,N,N,Requires pre-computed causal trace results in results/gpt2-xl/causal_trace/cases/
+average_causal_effects.ipynb,c896e9ac,Markdown: Line graph introduction,Y,NA,N,N,
+average_causal_effects.ipynb,c1fe3105,Plot line graphs with confidence intervals,N,Y,N,N,Requires pre-computed causal trace results
+causal_trace_frozen_mlp_attn.ipynb,36b9dc9c,Colab setup bash commands,Y,NA,N,Y,Colab-specific setup
+causal_trace_frozen_mlp_attn.ipynb,befc82ae,Colab detection,Y,Y,Y,N,Duplicated from causal_trace.ipynb
+causal_trace_frozen_mlp_attn.ipynb,b6f7e67a,Autoreload extension,Y,NA,N,N,
+causal_trace_frozen_mlp_attn.ipynb,90ba3338,Import modules,Y,Y,N,N,
+causal_trace_frozen_mlp_attn.ipynb,8ce71fd8,Load model and tokenizer,Y,Y,Y,N,Loads same model as causal_trace.ipynb
+causal_trace_frozen_mlp_attn.ipynb,b0089c69,Load knowns dataset and compute noise level,Y,Y,Y,N,Same computation as causal_trace.ipynb
+causal_trace_frozen_mlp_attn.ipynb,a36b314e,Define trace_with_repatch for three-way intervention,Y,Y,N,N,
+causal_trace_frozen_mlp_attn.ipynb,2d9b5a7c,Define calculate_hidden_flow_3 with MLP/Attn disable options,Y,Y,N,N,
+causal_trace_frozen_mlp_attn.ipynb,427f3989,Demo causal trace with MLP disabled,Y,Y,N,N,
+causal_trace_frozen_mlp_attn.ipynb,2926aeac,Define comparison plotting functions,Y,Y,N,N,
+causal_trace_frozen_mlp_attn.ipynb,1631379e,Space Needle comparison example,Y,Y,N,N,
+causal_trace_frozen_mlp_attn.ipynb,e0d802d7,Average indirect effects over 1000 samples,Y,Y,N,N,Computationally expensive - runs over 1000 samples
+causal_trace_frozen_mlp_attn.ipynb,fda42ea1,Empty cell,Y,NA,N,Y,Empty placeholder
+experiments/causal_trace.py,main(),Command-line entry point for batch causal tracing,Y,Y,N,N,
+experiments/causal_trace.py,trace_with_patch(),Core causal intervention with patching,Y,Y,N,N,
+experiments/causal_trace.py,trace_with_repatch(),Extended causal intervention with unpatch,Y,Y,N,N,
+experiments/causal_trace.py,calculate_hidden_flow(),Calculate hidden flow across all layers/tokens,Y,Y,N,N,
+experiments/causal_trace.py,trace_important_states(),Scan all token/layer positions,Y,Y,N,N,
+experiments/causal_trace.py,trace_important_window(),Window-based scanning for MLP/Attn contributions,Y,Y,N,N,
+experiments/causal_trace.py,ModelAndTokenizer,Model and tokenizer wrapper class,Y,Y,N,N,
+experiments/causal_trace.py,layername(),Generate layer names for different model architectures,Y,Y,N,N,
+experiments/causal_trace.py,plot_trace_heatmap(),Plot causal trace results as heatmap,Y,Y,N,N,
+experiments/causal_trace.py,make_inputs(),Utility function: make_inputs,Y,Y,N,N,
+experiments/causal_trace.py,decode_tokens(),Utility function: decode_tokens,Y,Y,N,N,
+experiments/causal_trace.py,find_token_range(),Utility function: find_token_range,Y,Y,N,N,
+experiments/causal_trace.py,predict_token(),Utility function: predict_token,Y,Y,N,N,
+experiments/causal_trace.py,predict_from_input(),Utility function: predict_from_input,Y,Y,N,N,
+experiments/causal_trace.py,collect_embedding_std(),Utility function: collect_embedding_std,Y,Y,N,N,
+experiments/causal_trace.py,guess_subject(),Utility function: guess_subject,Y,Y,N,N,
+experiments/evaluate.py,main(),Main evaluation loop - applies algorithm and computes metrics,Y,Y,N,N,
+experiments/evaluate.py,ALG_DICT,Dictionary mapping algorithm names to implementations,Y,Y,N,N,
+experiments/evaluate.py,DS_DICT,Dictionary mapping dataset names to classes and eval methods,Y,Y,N,N,
+experiments/evaluate.py,__main__ argparse,Command-line argument parsing,Y,Y,N,N,
+rome/rome_main.py,apply_rome_to_model(),Main entry point for ROME model editing,Y,Y,N,N,
+rome/rome_main.py,execute_rome(),Execute ROME algorithm for a single update,Y,Y,N,N,
+rome/rome_main.py,upd_matrix_match_shape(),Handle transposed weight representations,Y,Y,N,N,
+rome/rome_main.py,get_context_templates(),Generate and cache context templates,Y,Y,N,N,
+rome/compute_u.py,compute_u(),Compute left vector for rank-1 update,Y,Y,N,N,
+rome/compute_u.py,get_inv_cov(),Retrieve and compute inverse covariance statistics,Y,Y,N,N,
+rome/compute_v.py,compute_v(),Compute right vector via optimization,Y,Y,N,N,
+rome/compute_v.py,get_module_input_output_at_word(),Get module input/output at word token,Y,Y,N,N,
+rome/compute_v.py,find_fact_lookup_idx(),Find fact lookup index in prompt,Y,Y,N,N,
